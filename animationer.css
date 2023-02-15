@@ -123,17 +123,37 @@
 
 .fade_out {
   animation-name: fade_out;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fade_out {
   0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
 /* Animation 8: Fade in */
+
+.fade_in {
+  animation-name: fade_in;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 /* Animation 9: Rotation */
 
@@ -145,24 +165,13 @@
 }
 
 @keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(90deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(270deg);
-  }
   100% {
     transform: rotate(360deg);
   }
 }
 
-/* Animation 10: Rotation 2 */
+/* Animation 10: Rotation 2 
+    Dont know what to do! */
 
 .rotation2 {
   animation-name: rotation2;
@@ -173,18 +182,49 @@
 
 @keyframes rotation2 {
   0% {
-    transform: translate(10%, 10%);
-  }
-  25% {
-    transform: translate(10%, 10%) rotate(90deg);
-  }
-  50% {
-    transform: translate(10%, 10%) rotate(180deg);
-  }
-  75% {
-    transform: translate(10%, 10%) rotate(270deg);
+    transform: rotate(0deg);
+    transform-origin: -20% 20%;
   }
   100% {
-    transform: translate(10%, 10%) rotate(360deg);
+    transform: rotate(360deg);
+    transform-origin: -20% 20%;
+  }
+}
+
+/* Animation 11: Glow */
+
+.glow {
+  animation: glow 2.5s linear infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    filter: brightness(0%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+
+/* Animation 11: blur to gray */
+
+.blur_to_gray {
+  animation: blur_to_gray;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.47, 0.04, 0.91, 0.74);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blur_to_gray {
+  0% {
+    transform: translate(-150%, 0);
+  }
+  50% {
+    filter: blur(0px) grayscale(0%);
+  }
+  100% {
+    transform: translate(150%, 0);
+    filter: blur(10px) grayscale(100%);
   }
 }
