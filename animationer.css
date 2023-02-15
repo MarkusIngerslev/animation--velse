@@ -101,7 +101,7 @@
   }
 }
 
-/* Animation 6: Zoom in*/
+/* Animation 6: Zoom in */
 
 .zoom_in {
   animation-name: zoom_in;
@@ -116,5 +116,75 @@
   }
   100% {
     transform: scale(800%);
+  }
+}
+
+/* Animation 7: Fade out */
+
+.fade_out {
+  animation-name: fade_out;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes fade_out {
+  0% {
+  }
+}
+
+/* Animation 8: Fade in */
+
+/* Animation 9: Rotation */
+
+.rotation {
+  animation-name: rotation;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation 10: Rotation 2 */
+
+.rotation2 {
+  animation-name: rotation2;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotation2 {
+  0% {
+    transform: translate(10%, 10%);
+  }
+  25% {
+    transform: translate(10%, 10%) rotate(90deg);
+  }
+  50% {
+    transform: translate(10%, 10%) rotate(180deg);
+  }
+  75% {
+    transform: translate(10%, 10%) rotate(270deg);
+  }
+  100% {
+    transform: translate(10%, 10%) rotate(360deg);
   }
 }
