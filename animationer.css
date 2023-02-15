@@ -1,19 +1,83 @@
 /* Animation 1: Falling
    Bolden falder konstant fra oven. */
 .falling {
-    animation-name: falling;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+  animation-name: falling;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 @keyframes falling {
-    0% {
-        transform: translate(0,-300%);
-    }
+  0% {
+    transform: translate(0, -300%);
+  }
 
-    100% {
-        transform: translate(0,300%);
-    }
-    
+  100% {
+    transform: translate(0, 300%);
+  }
+}
+
+/* Animation 2: Bouncing
+   Bolden falder fra toppen og bouncer så på bunden til bage til toppen. */
+.bouncing {
+  animation: bouncing;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.47, 0.04, 0.91, 0.74);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes bouncing {
+  0% {
+    transform: translate(0, -145%);
+  }
+  100% {
+    transform: translate(0, 145%);
+  }
+}
+
+/* Animation 3: Drop
+   Bolden falder fra toppen og stopper på bunden af boxen. */
+.drop {
+  animation-name: drop;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes drop {
+  0% {
+    transform: translate(0, -300%);
+  }
+  100% {
+    transform: translate(0, 145%);
+  }
+}
+
+/* Animation 4: Pattern
+   Bolden bevæger sig i et fast mønster. */
+.pattern {
+  animation-name: pattern;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pattern {
+  0% {
+    transform: translate(0, -145%);
+  }
+  25% {
+    transform: translate(150%, 0);
+  }
+  50% {
+    transform: translate(0, 145%);
+  }
+  75% {
+    transform: translate(-150%, 0);
+  }
+  100% {
+    transform: translate(0, -145%);
+  }
 }
