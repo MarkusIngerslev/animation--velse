@@ -1,5 +1,6 @@
 /* Animation 1: Falling
    Bolden falder konstant fra oven. */
+
 .falling {
   animation-name: falling;
   animation-duration: 1s;
@@ -17,8 +18,8 @@
   }
 }
 
-/* Animation 2: Bouncing
-   Bolden falder fra toppen og bouncer så på bunden til bage til toppen. */
+/* Animation 2: Bouncing */
+
 .bouncing {
   animation: bouncing;
   animation-duration: 1s;
@@ -36,8 +37,8 @@
   }
 }
 
-/* Animation 3: Drop
-   Bolden falder fra toppen og stopper på bunden af boxen. */
+/* Animation 3: Drop */
+
 .drop {
   animation-name: drop;
   animation-duration: 1s;
@@ -55,8 +56,8 @@
   }
 }
 
-/* Animation 4: Pattern
-   Bolden bevæger sig i et fast mønster. */
+/* Animation 4: Pattern */
+
 .pattern {
   animation-name: pattern;
   animation-duration: 2s;
@@ -79,5 +80,41 @@
   }
   100% {
     transform: translate(0, -145%);
+  }
+}
+
+/* Animation 5: Zoom out */
+
+.zoom_out {
+  animation-name: zoom_out;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoom_out {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(20%);
+  }
+}
+
+/* Animation 6: Zoom in*/
+
+.zoom_in {
+  animation-name: zoom_in;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoom_in {
+  0% {
+    transform: scale(100%);
+  }
+  100% {
+    transform: scale(800%);
   }
 }
