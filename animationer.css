@@ -206,7 +206,7 @@
   }
 }
 
-/* Animation 11: blur to gray */
+/* Animation 12: blur to gray */
 
 .blur_to_gray {
   animation: blur_to_gray;
@@ -226,5 +226,117 @@
   100% {
     transform: translate(150%, 0);
     filter: blur(10px) grayscale(100%);
+  }
+}
+
+/* Animation 13: pulse */
+
+.pulse {
+  animation: pulse 2s linear infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(90%);
+  }
+  100% {
+    transform: scale(120%);
+  }
+}
+
+/* Animation 14: overshoot */
+
+.overshoot {
+  animation: overshoot;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.27, 0.41, 0.82, 1.6);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes overshoot {
+  0% {
+    transform: translate(-150%, 0);
+  }
+  100% {
+    transform: translate(150%, 0);
+  }
+}
+
+/* Animation 15:*/
+
+.bounce {
+  animation: bounce 3s linear 1 forwards;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-150%, -100%) rotate(0deg);
+  }
+  20% {
+    transform: translate(-90%, 145%) rotate(72deg);
+  }
+  30% {
+    transform: translate(-60%, 20%) rotate(108deg);
+  }
+  40% {
+    transform: translate(-30%, 145%) rotate(144deg);
+  }
+  50% {
+    transform: translate(0%, 60%) rotate(180deg);
+  }
+  60% {
+    transform: translate(30%, 145%) rotate(216deg);
+  }
+  70% {
+    transform: translate(60%, 100%) rotate(252deg);
+  }
+  80% {
+    transform: translate(90%, 145%) rotate(288deg);
+  }
+  90% {
+    transform: translate(120%, 130%) rotate(324deg);
+  }
+  100% {
+    transform: translate(150%, 145%) rotate(360deg);
+  }
+}
+
+/* Animation 16: Squash */
+
+.squash {
+  animation-name: squash;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+@keyframes squash {
+  0% {
+    transform: translate(0, -145%) scale(1);
+  }
+  24.9% {
+    transform: translate(150%, 0) scale(1);
+  }
+  25% {
+    transform: translate(150%, 0) scale(0.9);
+  }
+  49.9% {
+    transform: translate(0, 150%) scale(0.9);
+  }
+  50% {
+    transform: translate(0, 150%) scale(0.8);
+  }
+  74.9% {
+    transform: translate(-160%, 0) scale(0.8);
+  }
+  75% {
+    transform: translate(-160%, 0) scale(0.7);
+  }
+  99.9% {
+    transform: translate(0, -165%) scale(0.7);
+  }
+  100% {
+    transform: translate(0, -165%) scale(0.6);
   }
 }
