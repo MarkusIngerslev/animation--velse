@@ -174,21 +174,12 @@
     Dont know what to do! */
 
 .rotation2 {
-  animation-name: rotation2;
-  animation-duration: 4s;
-  animation-timing-function: linear;
+  transform-origin: 50% 180%;
+  translate: 0% -145%;
+  animation-name: rotation;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
-}
-
-@keyframes rotation2 {
-  0% {
-    transform: rotate(0deg);
-    transform-origin: -20% 20%;
-  }
-  100% {
-    transform: rotate(360deg);
-    transform-origin: -20% 20%;
-  }
+  animation-timing-function: linear;
 }
 
 /* Animation 11: Glow */
@@ -199,10 +190,10 @@
 
 @keyframes glow {
   0% {
-    filter: brightness(0%);
+    filter: drop-shadow(0 0 0px yellow);
   }
   100% {
-    filter: brightness(100%);
+    filter: drop-shadow(0 0 16px yellow);
   }
 }
 
@@ -218,13 +209,13 @@
 
 @keyframes blur_to_gray {
   0% {
-    transform: translate(-150%, 0);
+    transform: translate(-150%, 0) rotate(0deg);
   }
   50% {
     filter: blur(0px) grayscale(0%);
   }
   100% {
-    transform: translate(150%, 0);
+    transform: translate(150%, 0) rotate(150deg);
     filter: blur(10px) grayscale(100%);
   }
 }
